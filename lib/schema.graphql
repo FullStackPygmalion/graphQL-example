@@ -1,0 +1,13 @@
+type User {
+    _id: ID!  # con ! definimos que un dato es obligatorio
+    name: String!
+    email: String!
+    address: String
+}
+
+type Query {
+    "Devuelve todos los usuarios"
+    users: [User]
+    "Devuelve un solo usuario por medio del id"
+    user(id: ID!): User
+}
