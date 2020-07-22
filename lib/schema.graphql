@@ -11,3 +11,14 @@ type Query {
     "Devuelve un solo usuario por medio del id"
     user(id: ID!): User
 }
+
+type UserInput {
+    name: String!
+    email: String!
+    address: String
+}
+
+type Mutation {
+    "Crea un usuario"
+    createUser(input: UserInput!) : User # crea un usuario que solicita un tipo UserInput y devuelve User
+}
